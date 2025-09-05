@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bonepeople.android.base.view.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pagePadding"
+        android:text="@string/caption_text_white"
+        app:drawableEndCompat="@drawable/arrow_right"
+        app:layout_constraintTop_toBottomOf="@id/titleView" />
+
+    <TextView
+        android:id="@+id/textViewBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pagePadding"
+        android:text="@string/caption_text_black"
+        app:drawableEndCompat="@drawable/arrow_right"
+        app:layout_constraintTop_toBottomOf="@id/textViewWhite" />
+
+    <TextView
+        android:id="@+id/textViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pagePadding"
+        android:text="@string/caption_text_about"
+        app:drawableEndCompat="@drawable/arrow_right"
+        app:layout_constraintTop_toBottomOf="@id/textViewBlack" />
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pagePadding"
+        android:text="Test"
+        app:drawableEndCompat="@drawable/arrow_right"
+        app:layout_constraintTop_toBottomOf="@id/textViewAbout" />
+
+    <TextView
+        android:id="@+id/textViewVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/font_black_30"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="version" />
+</androidx.constraintlayout.widget.ConstraintLayout>

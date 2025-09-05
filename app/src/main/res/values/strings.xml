@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">存储统计</string>
+    <string name="app_version">v%1$s\n于%2$s(北京)发布</string>
+
+    <!--Toast展示的信息-->
+    <string name="toast_quitConfirm">再按一次退出应用</string>
+    <string name="toast_sdcard_permission">需要存储空间的权限才能扫描文件</string>
+    <string name="toast_sdcard_error">内部存储不可用</string>
+    <string name="toast_comingSoon">敬请期待</string>
+
+    <!--用于控件内容的描述-->
+    <string name="contentDescription_fileIcon">文件类型图标</string>
+    <string name="contentDescription_rubbishMark">待清理文件标志</string>
+    <string name="contentDescription_close">关闭按钮</string>
+
+    <!--各种控件的名称-->
+    <string name="caption_button_startScan">开始扫描</string>
+    <string name="caption_button_stopScan">停止扫描</string>
+    <string name="caption_button_startClean">开始清理</string>
+    <string name="caption_button_stopClean">停止清理</string>
+    <string name="caption_button_browse">浏览文件</string>
+    <string name="caption_button_delete">删除</string>
+    <string name="caption_button_clean">标记为垃圾</string>
+    <string name="caption_button_save">取消标记</string>
+    <string name="caption_button_checkAll">全选</string>
+
+    <string name="caption_text_mine">我的文件</string>
+    <string name="caption_text_white">白名单</string>
+    <string name="caption_text_black">黑名单</string>
+    <string name="caption_text_set">设置</string>
+    <string name="caption_text_about">关于</string>
+    <string name="caption_text_file">我的文件</string>
+
+    <!--对话框中的文字提示信息-->
+    <string name="dialog_list_path_remove">移除“%1$s”？</string>
+
+    <string name="dialog_list_file_delete_title">确认删除？</string>
+    <string name="dialog_list_file_delete_message">该操作会删除当前指定文件夹下的所有文件，无论它是否存在于白名单中</string>
+    <string name="dialog_list_file_deleting">正在删除文件</string>
+    <string name="dialog_list_file_updating">正在更新文件</string>
+
+    <!--页面弹窗中的文字提示信息-->
+    <string name="popup_file_sort_name">按文件名排序</string>
+    <string name="popup_file_sort_size">按文件大小排序</string>
+
+    <!--用于显示各种状态的描述-->
+    <string name="state_emptyView">空空如也</string>
+    <string name="state_ready">还未进行扫描</string>
+    <string name="state_scan_executing">正在扫描文件…</string>
+    <string name="state_scan_stopping">正在停止扫描</string>
+    <string name="state_scan_finish">扫描已结束</string>
+    <string name="state_clean_executing">正在清理文件…</string>
+    <string name="state_clean_stopping">正在停止清理</string>
+    <string name="state_clean_finish">清理已完成</string>
+    <string name="state_fileCount_system">系统占用：%1$s</string>
+    <string name="state_fileCount_blank">剩余空间：%1$s</string>
+    <string name="state_fileCount_file">已扫描文件：%1$s (%2$d项)</string>
+    <string name="state_fileCount_rubbish">待清理文件：%1$s (%2$d项)</string>
+    <string name="state_directory_size">%1$s | %2$d项</string>
+    <string name="state_process_time">(%1$s秒)</string>
+
+    <!--页面中的静态文本-->
+    <string name="text_about_subject_feature">主要功能</string>
+    <string name="text_about_subject_require">软件要求</string>
+    <string name="text_about_subject_source">来源</string>
+    <string name="text_about_subject_statement">免责声明</string>
+    <string name="text_about_content_feature1">统计系统内部存储中文件所占的空间及文件数量</string>
+    <string name="text_about_content_feature2">快速清理目标文件</string>
+    <string name="text_about_content_require1">需要Android 6.0 及以上版本</string>
+    <string name="text_about_content_require2">需要读写手机存储的权限</string>
+    <string name="text_about_content_source1">软件作者：bonepeople</string>
+    <string name="text_about_content_source2">源码地址：https://github.com/bonepeople/SDCardCleaner</string>
+    <string name="text_about_content_source3">本软件基于GNU General Public License v3.0开源协议</string>
+    <string name="text_about_content_statement">该软件仅提供存储空间的查看清理等基础操作，不会执行非用户授权的任何操作，删除文件的后果由用户承担。</string>
+</resources>
