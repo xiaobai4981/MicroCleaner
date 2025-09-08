@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/blockPercent"
         android:layout_width="match_parent"
-        android:layout_height="18dp"
+        android:layout_height="300dp"
         android:background="@drawable/background_block_gray"
         android:padding="0.5dp"
         app:layout_constraintTop_toTopOf="parent">
@@ -87,6 +87,7 @@
         android:id="@+id/textViewBlank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
         android:drawablePadding="3dp"
         app:drawableStartCompat="@drawable/block_blank"
         tools:text="@string/state_fileCount_blank" />

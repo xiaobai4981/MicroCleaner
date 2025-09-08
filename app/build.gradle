@@ -4,37 +4,35 @@ plugins {
 }
 
 android {
-    namespace 'com.bonepeople.android.sdcardcleaner'
-    compileSdk 33
-
+    namespace 'com.leyou.microcleaner'
+    compileSdkVersion 36
     defaultConfig {
-        applicationId "com.bonepeople.android.sdcardcleaner"
-        minSdk 23
-        targetSdk 33
-        versionCode 13
-        versionName "2.1.4"
+        applicationId "com.leyou.microcleaner"
+        minSdk 24
+        targetSdkVersion 36
+        versionCode 1
+        versionName "1.0"
     }
 
     signingConfigs {
-        release {
-            storeFile file('app.jks')
-            storePassword 'F9VyTq8HwC0gBRObN8EAP2EGOSPlLWE6'
-            keyAlias 'release'
-            keyPassword 'F9VyTq8HwC0gBRObN8EAP2EGOSPlLWE6'
+        def keystorePropertiesFiles = rootProject.file("keystore.properties")
+        def keystoreProperties = new Properties()
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFiles))
+        basic {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
         }
     }
 
     buildTypes {
-        debug {
-            minifyEnabled false
-            signingConfig signingConfigs.release
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
         release {
             minifyEnabled true
             shrinkResources true
-            signingConfig signingConfigs.release
+            crunchPngs false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.basic
         }
     }
     buildTypes.configureEach {
@@ -50,12 +48,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -72,6 +70,7 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation("com.github.bonepeople:AndroidBase:1.7.0")
+    implementation 'androidx.activity:activity:1.8.0'
 
     // Coil https://github.com/coil-kt/coil
     def coilVersion = "2.1.0"

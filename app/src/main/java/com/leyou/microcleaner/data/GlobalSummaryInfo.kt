@@ -1,0 +1,35 @@
+package com.leyou.microcleaner.data
+
+import com.leyou.microcleaner.global.utils.NumberUtil
+
+data class GlobalSummaryInfo(
+    private val totalSpace: Long = 0L, //总空间
+    val freeSpace: Long = 0L, //剩余空间
+    val fileCount: Int = 0, //文件个数
+    val fileSize: Long = 0L, //文件大小
+    val rubbishCount: Int = 0, //垃圾文件个数
+    val rubbishSize: Long = 0L, //垃圾文件大小
+) {
+    fun getSystemSize(): Long {
+        return totalSpace - freeSpace - fileSize
+    }
+
+    fun getRubbishPercent(): Float {
+        return runCatching {
+            NumberUtil.div(rubbishSize.toDouble(), totalSpace.toDouble(), 3).toFloat()
+        }.getOrDefault(0f)
+    }
+
+    fun getFilePercent(): Float {
+        return runCatching {
+            NumberUtil.div(fileSize.toDouble(), totalSpace.toDouble(), 3).toFloat()
+        }.getOrDefault(0f)
+    }
+
+    fun getSystemPercent(): Float {
+        //此数据仅用于StorageSummary中的展示，并不是单纯的系统空间占比
+        return runCatching {
+            (1 - NumberUtil.div(freeSpace.toDouble(), totalSpace.toDouble(), 3)).toFloat()
+        }.getOrDefault(0f)
+    }
+}

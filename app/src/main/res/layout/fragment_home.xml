@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.bonepeople.android.sdcardcleaner.ui.home.StorageSummary
+    <com.leyou.microcleaner.ui.home.StorageSummary
         android:id="@+id/storageSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_marginTop="20dp"
         android:foreground="?selectableItemBackgroundBorderless"
         android:stateListAnimator="@animator/lift_on_touch"
-        app:cardBackgroundColor="#8BC34A"
+        app:cardBackgroundColor="#0F8DED"
         app:cardCornerRadius="8dp"
         app:cardElevation="10dp"
         app:contentPadding="10dp"
@@ -63,6 +63,7 @@
             android:gravity="center"
             android:paddingHorizontal="20dp"
             android:paddingVertical="8dp"
+            android:textSize="23sp"
             android:text="@string/caption_button_startScan"
             app:drawableStartCompat="@drawable/home_scan" />
     </androidx.cardview.widget.CardView>
@@ -83,6 +84,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:text="@string/caption_button_startClean"
+        android:background="#0F8DED"
         app:drawableTopCompat="@drawable/home_clean"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textViewBrowse"
@@ -107,6 +109,7 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="5dp"
         android:text="@string/caption_button_browse"
+        android:background="#0F8DED"
         app:drawableTopCompat="@drawable/home_browse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#34C4C1</color>
+    <color name="colorPrimaryDark">#0F4DEB</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="line_gray">#999999</color>
 
-    <color name="block_rubbish">#FFF23B</color>
-    <color name="block_file">#ABE18D</color>
+    <color name="block_rubbish">#EA2424</color>
+    <color name="block_file">#D8D51C</color>
     <color name="block_system">#A7A3A3</color>
     <color name="block_blank">#FFFFFF</color>
 
