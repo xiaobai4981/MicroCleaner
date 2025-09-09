@@ -68,8 +68,8 @@
     <string name="text_about_content_feature2">快速清理目标文件</string>
     <string name="text_about_content_require1">需要Android 6.0 及以上版本</string>
     <string name="text_about_content_require2">需要读写手机存储的权限</string>
-    <string name="text_about_content_source1">软件作者：bonepeople</string>
-    <string name="text_about_content_source2">源码地址：https://github.com/bonepeople/SDCardCleaner</string>
+    <string name="text_about_content_source1">软件作者：xiaobai4981</string>
+    <string name="text_about_content_source2">源码地址：https://github.com/xiaobai4981/MicroCleaner/tree/GoogleVersion</string>
     <string name="text_about_content_source3">本软件基于GNU General Public License v3.0开源协议</string>
     <string name="text_about_content_statement">该软件仅提供存储空间的查看清理等基础操作，不会执行非用户授权的任何操作，删除文件的后果由用户承担。</string>
 </resources>
