@@ -72,6 +72,8 @@ dependencies {
     implementation("com.github.bonepeople:AndroidBase:1.7.0")
     implementation 'androidx.activity:activity:1.8.0'
 
+    implementation 'com.google.android.gms:play-services-ads:24.4.0'
+
     // Coil https://github.com/coil-kt/coil
     def coilVersion = "2.1.0"
     implementation("io.coil-kt:coil:$coilVersion")
