@@ -68,8 +68,8 @@
     <string name="text_about_content_feature2">Quickly cleans target files</string>
     <string name="text_about_content_require1">Requires Android 6.0 and above</string>
     <string name="text_about_content_require2">Requires permission to read and write to device storage</string>
-    <string name="text_about_content_source1">Software Author: bonepeople</string>
-    <string name="text_about_content_source2">Source Code: https://github.com/bonepeople/SDCardCleaner</string>
+    <string name="text_about_content_source1">Software Author: xiaobai4981</string>
+    <string name="text_about_content_source2">Source Code: https://github.com/xiaobai4981/MicroCleaner</string>
     <string name="text_about_content_source3">This software is licensed under GNU General Public License v3.0</string>
     <string name="text_about_content_statement">This software provides basic operations such as viewing and cleaning storage space. It will not perform any unauthorized actions, and the consequences of file deletion are the user\'s responsibility.</string>
 </resources>

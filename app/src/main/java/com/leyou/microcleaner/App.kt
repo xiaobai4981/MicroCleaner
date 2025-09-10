@@ -46,6 +46,7 @@ class App : BaseApp(), ImageLoaderFactory {
 
     companion object {
         const val BUILD_TIME = BuildConfig.buildTime
+        var isMainActivityActive: Boolean = false
     }
 
     class ApkDecoder(private val path: String) : Decoder {

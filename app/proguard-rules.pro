@@ -38,3 +38,5 @@
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 
 -keep class * implements androidx.viewbinding.ViewBinding
+-keep public class com.tradplus.** { *; }
+-keep class com.tradplus.ads.** { *; }

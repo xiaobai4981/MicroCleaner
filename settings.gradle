@@ -1,8 +1,23 @@
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        flatDir {
+            dirs 'libs'
+        }
         google()
         mavenCentral()
+        // Ironsource
+        maven { url 'https://android-sdk.is.com/' }
+        // Pangle
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
         maven { url 'https://jitpack.io' }
     }

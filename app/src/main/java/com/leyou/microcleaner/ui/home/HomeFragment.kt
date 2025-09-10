@@ -25,6 +25,7 @@ import com.bonepeople.android.widget.util.AppTime
 import com.bonepeople.android.widget.util.AppToast
 import com.bonepeople.android.widget.util.AppView.show
 import com.bonepeople.android.widget.util.AppView.singleClick
+import com.leyou.microcleaner.ui.ads.maybeShowAd
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -124,13 +125,17 @@ class HomeFragment : ViewBindingFragment<FragmentHomeBinding>() {
         }
         views.cardViewScan.singleClick {
             if (viewModel.pageState.value != HomeState.ScanExecuting) {
-                checkScanPermission { viewModel.startScan() }
+                checkScanPermission {
+                    maybeShowAd()
+                    viewModel.startScan()
+                }
             } else {
                 viewModel.stopScan()
             }
         }
         views.textViewClean.singleClick {
             if (viewModel.pageState.value != HomeState.CleanExecuting) {
+                maybeShowAd()
                 viewModel.startClean()
             } else {
                 viewModel.stopClean()
@@ -138,6 +143,7 @@ class HomeFragment : ViewBindingFragment<FragmentHomeBinding>() {
         }
         views.textViewBrowse.singleClick {
             StandardActivity.call(FileExplorerFragment.newInstance(FileTreeManager.Summary.rootFile)).onResult {
+                maybeShowAd()
                 viewModel.updateSummary()
             }
         }
