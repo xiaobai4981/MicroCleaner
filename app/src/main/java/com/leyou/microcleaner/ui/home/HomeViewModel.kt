@@ -80,7 +80,7 @@ class HomeViewModel : ViewModel() {
             refreshJob.cancel()
         }
         cleanJob?.invokeOnCompletion { //  协程执行完毕后，更新界面
-            updateProcessTime(scanStartTime)
+            updateProcessTime(cleanStartTime)
             updateSummary()
             pageState.value = HomeState.CleanFinish
         }

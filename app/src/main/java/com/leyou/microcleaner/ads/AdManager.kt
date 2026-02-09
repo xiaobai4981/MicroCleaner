@@ -12,7 +12,6 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardItem
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
-import com.leyou.microcleaner.ui.home.HomeActivity
 import kotlin.random.Random
 
 
@@ -102,9 +101,33 @@ object AdManager {
     ): Boolean {
         if (Random.nextDouble() >= triggerProbability) return false
         return if (Random.nextDouble() < rewardedProbability) {
-            showRewarded(activity, onRewardEarned)
+            showRewardedAdConfirmDialog(activity = activity, onRewardEarned = onRewardEarned)
         } else {
             showInterstitial(activity)
         }
     }
+
+    fun showRewardedAdConfirmDialog( activity: Activity, onRewardEarned: ((RewardItem) -> Unit)? = null): Boolean {
+        if (rewardedAd == null) {
+            return false;
+        }
+
+        activity.runOnUiThread {
+            android.app.AlertDialog.Builder(activity)
+                .setTitle("WATCH AD TO SUPPORT US?")
+                .setMessage("Would you？")
+                .setCancelable(true)
+                .setPositiveButton("YES") { dialog, _ ->
+                    dialog.dismiss()
+                    showRewarded(activity, onRewardEarned)
+                }
+                .setNegativeButton("NO") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
+        }
+        return true;
+    }
+
+
 }

@@ -20,7 +20,7 @@ class SettingFragment : ViewBindingFragment<FragmentSettingBinding>() {
         views.textViewVersion.run {
             val versionName = if (ApplicationHolder.debug) "${ApplicationHolder.getVersionName()} - debug" else ApplicationHolder.getVersionName()
             val buildTime = AppTime.getDateTimeString(App.BUILD_TIME, timeZone = TimeZone.getTimeZone("GMT+8"))
-            text = getString(R.string.app_version, versionName, buildTime)
+//            text = getString(R.string.app_version, versionName, buildTime)
         }
     }
 }

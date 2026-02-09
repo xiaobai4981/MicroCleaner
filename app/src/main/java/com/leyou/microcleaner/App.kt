@@ -14,11 +14,13 @@ import coil.request.Options
 import com.bonepeople.android.base.manager.BaseApp
 import com.bonepeople.android.base.view.TitleView
 import com.bonepeople.android.widget.ApplicationHolder
+import com.leyou.microcleaner.ads.AdManager
 
 class App : BaseApp(), ImageLoaderFactory {
     override val appName = "MicroCleaner"
     override fun onCreate() {
         super.onCreate()
+        AdManager.init(this)
         //页面标题栏默认配置
         TitleView.defaultConfig.apply {
             statusBarBackground = ColorDrawable(getColor(R.color.colorPrimaryDark))

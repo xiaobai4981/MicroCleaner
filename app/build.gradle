@@ -10,8 +10,8 @@ android {
         applicationId "com.leyou.microcleaner"
         minSdk 24
         targetSdkVersion 36
-        versionCode 1
-        versionName "1.0"
+        versionCode 7
+        versionName "1.6"
     }
 
     signingConfigs {
@@ -65,14 +65,29 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation("androidx.core:core-ktx:1.6.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("com.google.android.material:material:1.4.0")
+
+    implementation(name: 'base-release', ext: 'aar')
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.github.bonepeople:Shade:1.6.0'
+    api 'androidx.fragment:fragment-ktx:1.6.2'
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
-    implementation("com.github.bonepeople:AndroidBase:1.7.0")
+
+    api 'com.github.bonepeople:AndroidWidget:1.7.3'
     implementation 'androidx.activity:activity:1.8.0'
 
-    implementation 'com.google.android.gms:play-services-ads:24.4.0'
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+
+    // Paging https://developer.android.google.cn/topic/libraries/architecture/paging/v3-overview
+    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+
+    // AppStartup https://developer.android.google.cn/topic/libraries/app-startup?hl=zh-cn
+    implementation "androidx.startup:startup-runtime:1.1.1"
+
+
+    implementation 'com.google.android.gms:play-services-ads:24.7.0'
 
     // Coil https://github.com/coil-kt/coil
     def coilVersion = "2.1.0"
