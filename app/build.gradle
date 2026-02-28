@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace 'com.leyou.microcleaner'
+    namespace 'com.leyou.microstorageanalyzer'
     compileSdkVersion 36
     defaultConfig {
-        applicationId "com.leyou.microcleaner"
+        applicationId "com.leyou.microstorageanalyzer"
         minSdk 24
         targetSdkVersion 36
-        versionCode 7
-        versionName "1.6"
+        versionCode 1
+        versionName "1.0"
     }
 
     signingConfigs {

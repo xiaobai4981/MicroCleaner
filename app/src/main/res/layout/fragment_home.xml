@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.leyou.microcleaner.ui.home.StorageSummary
+    <com.leyou.microstorageanalyzer.ui.home.StorageSummary
         android:id="@+id/storageSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

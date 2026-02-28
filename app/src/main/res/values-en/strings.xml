@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MicroCleaner</string>
+    <string name="app_name">MicroStorageAnalyzer</string>
     <string name="app_version">v%1$s\n</string>
 
     <!--Toast展示的信息-->
@@ -14,8 +14,8 @@
     <string name="contentDescription_close">Close Button</string>
 
     <!--各种控件的名称-->
-    <string name="caption_button_startScan">Start Scan</string>
-    <string name="caption_button_stopScan">Stop Scan</string>
+    <string name="caption_button_startScan">Start Analysis</string>
+    <string name="caption_button_stopScan">Stop Analysis</string>
     <string name="caption_button_startClean">Start Clean</string>
     <string name="caption_button_stopClean">Stop Clean</string>
     <string name="caption_button_browse">Browse Files</string>

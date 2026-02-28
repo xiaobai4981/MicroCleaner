@@ -17,5 +17,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "MicroCleaner"
+rootProject.name = "MicroStorageAnalyzer"
 include ':app'
