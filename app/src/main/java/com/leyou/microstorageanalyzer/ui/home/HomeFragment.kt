@@ -126,8 +126,6 @@ class HomeFragment : ViewBindingFragment<FragmentHomeBinding>() {
         views.cardViewScan.singleClick {
             if (viewModel.pageState.value != HomeState.ScanExecuting) {
                 checkScanPermission {
-                    // TODO 修改广告ID后再开启下面这个
-                    //maybeShowAd()
                     viewModel.startScan()
                 }
             } else {
@@ -136,8 +134,6 @@ class HomeFragment : ViewBindingFragment<FragmentHomeBinding>() {
         }
         views.textViewClean.singleClick {
             if (viewModel.pageState.value != HomeState.CleanExecuting) {
-                // TODO 修改广告ID后再开启下面这个
-                //maybeShowAd()
                 viewModel.startClean()
             } else {
                 viewModel.stopClean()
@@ -145,8 +141,7 @@ class HomeFragment : ViewBindingFragment<FragmentHomeBinding>() {
         }
         views.textViewBrowse.singleClick {
             StandardActivity.call(FileExplorerFragment.newInstance(FileTreeManager.Summary.rootFile)).onResult {
-                // TODO 修改广告ID后再开启下面这个
-                //maybeShowAd()
+                maybeShowAd()
                 viewModel.updateSummary()
             }
         }

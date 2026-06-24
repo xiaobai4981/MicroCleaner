@@ -24,10 +24,11 @@
         android:theme="@style/AppTheme">
         <!--TODO后面要修改ID,这个是官方测试ID
         ca-app-pub-3940256099942544~3347511713
+        ca-app-pub-9746972440888604~5596554562
         -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9434953728707799~1048480402"/>
+            android:value="ca-app-pub-9746972440888604~5596554562"/>
         <meta-data
             android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
             android:value="true" />
