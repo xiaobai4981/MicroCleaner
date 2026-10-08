@@ -38,7 +38,6 @@
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 
 -keep class * implements androidx.viewbinding.ViewBinding
--keep class com.google.** { *; }
 -keep class com.unity3d.** { *; }
 -keep class com.applovin.** { *; }
 -keep class com.adjust.** { *; }
